@@ -9,10 +9,22 @@ header = csvdata[2]
 activityName = data[:,1]
 METS = data[:,2]
 time = data[:,3]
+intensity = data[:,4]
 targetTime = data[1,10]
 targetMET = data[1,11]
-BMI = data[:,12]
+# targetIntensity = data[1,13]
+BMI = data[1,12]
 N = length(activityName)
+
+#Compare targetMET & BMI to ensure valid target
+if targetMET >= BMI
+  targetMET = BMI #set as BMI limit
+end
+
+#specify intensity
+#specify equipment
+#specify cardio
+#specify upper,lower,core
 
 problem = Model(solver = GurobiSolver())
 
