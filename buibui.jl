@@ -9,9 +9,9 @@ header = csvdata[2]
 activityName = data[:,1]
 METS = data[:,2]
 time = data[:,3]
-targetTime = data[1,4]
-targetMET = data[1,5]
-BMI = data[:,6]
+targetTime = data[1,10]
+targetMET = data[1,11]
+BMI = data[:,12]
 N = length(activityName)
 
 problem = Model(solver = GurobiSolver())
