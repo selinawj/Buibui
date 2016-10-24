@@ -42,3 +42,10 @@ for i = 1:N
         println("Please do ", activityName[i], " for ", time[i], " minutes.")
    end
 end
+
+println("Optimum METS burned = $(getobjectivevalue(problem)).")
+if getobjectivevalue(problem) <= targetMET
+  println("METs burned is ", targetMET - getobjectivevalue(problem), " below your target due to BMI constraints.")
+else
+  println("METs target is achievable!")
+end
