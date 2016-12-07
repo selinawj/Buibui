@@ -1,3 +1,3 @@
-# buibui  
+# Exercise Optimisation Model
 
-A simplified optimization model for exercise sets selection.
+A simplified optimisation model for exercise sets selection.
